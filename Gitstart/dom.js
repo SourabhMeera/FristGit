@@ -48,7 +48,7 @@ secondItem.style.backgroundColor = 'green';
 var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
 thirdItem.style = "display: none";*/
 
-var titles = document.querySelectorAll('.title');
+/*var titles = document.querySelectorAll('.title');
 
 console.log(titles);
 titles[0].textContent = 'Bored';
@@ -62,5 +62,53 @@ var odd = document.querySelectorAll('li:nth-child(odd)');
 for(var i = 0; i < odd.length; i++)
 {
     odd[i].style.background = 'green';
-}
+}*/
+
+var itemList = document.querySelector('#items');
+//parent element 
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = '#f4f4f4';
+console.log(itemList.parentElement.parentElement.parentElement);
+
+//firstchild &firstchildelement
+console.log(itemList.firstChild);
+itemList.firstChild.textContent = 'Hey';
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent = 'Hello 1'
+
+//lastchild &lastchildelement
+console.log(itemList.lastChild);
+itemList.lastChild.textContent = 'How';
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = 'R U';
+
+//nextsibling & nextsiblingelement
+console.log(itemList.nextSibling);
+console.log(itemList.nextElementSibling);
+
+//previoussibling & prevsiblingelement
+console.log(itemList.previousSibling);
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = 'green';
+
+//createelement,setattribute,createtextnode,appendchlid
+var newDiv = document.createElement('div');
+newDiv.className = 'hello';
+newDiv.id = 'hello1';
+
+newDiv.setAttribute('title', 'Hello Div');
+var newDivText = document.createTextNode('Hello World');
+
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+newDiv.style.fontSize = '30px';
+container.insertBefore(newDiv,h1);
+
+
+
+
 
