@@ -17,7 +17,7 @@ for(var i = 0; i < items.length; i++)
     items[i].style.fontWeight = 'bold';
     items[i].style.color = 'red';
 
-}*/
+}
 
 
 
@@ -32,4 +32,22 @@ for(var i = 0; i < li.length; i++)
     li[i].style.color = 'yellow';
 
 }
-li[4].style.color = 'green';
+li[4].style.color = 'green';*/
+var header = document.querySelector('#main-header');
+header.style.borderBottom = 'solid 4px #ccc';
+
+var input = document.querySelector('input')
+input.value = 'Hello World'
+
+var submit = document.querySelector('input[type="submit"]');
+submit.value="SEND"
+
+var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor = 'green';
+
+var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style = "display: none";
+
+
+
+
